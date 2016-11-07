@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+
+<title>Listing content</title>
+
+<body>
+<a href="linux-toc.html">Table of Contents</a>	
+	
+<h1>Basic listing</h1>
+<div class="h2section">
+	
+<h2>List all files and directories in a vertical format</h2>
+<div class="preboxcontainer">
+<pre class="prebox">
+<span class="server">[server]$ </span><span class="command">ls -la</span></pre></div>
+		
+<h2>Show file types and directories</h2>
+<p>Directories are noted by trailing slash and symbolic links with @.</p>
+<div class="preboxcontainer">
+<pre class="prebox">
+<span class="server">[server]$ </span><span class="command">ls -laF</span></pre></div>
+	
+<h2>List only directories</h2>
+<div class="preboxcontainer">
+<pre class="prebox">
+<span class="server">[server]$ </span><span class="command">du -hx --max-depth 1</span></pre></div>
+		
+<h2>List files and directories by timestamp</h2>
+<p>Lists all files and directories in the current directory in order.</p>
+<div class="preboxcontainer">
+<pre class="prebox">
+<span class="server">[server]$ </span><span class="command">ls -lat</span></pre></div>
+</div>
+
+
+
+
+
+<h1>Listing by size</h1>
+<div class="h2section">
+<h2>List files and sort by size</h2>
+<div class="preboxcontainer">
+<pre class="prebox">
+<span class="server">[server]$ </span><span class="command">ls -lahS</span></pre></div>
+
+<p>This example only outputs the size and files.</p>
+	
+<h2>List all files, directories and sub-directories in bytes</h2>
+<p>Change the letter 'b' to 'k' if you do not want to show results in kilobytes.</p>
+<div class="preboxcontainer">
+<pre class="prebox">
+<span class="server">[server]$ </span><span class="command">du -ab | sort -nr</span></pre></div>
+		
+<h2>List all directories and sub-directories in kilobytes</h2>
+<div class="preboxcontainer">
+<pre class="prebox">
+<span class="server">[server]$ </span><span class="command">du -k | sort -nr | more | head</span></pre></div>
+	
+<h2>Listing directories</h2>	
+<p>List all directories over a certain size<p>
+<p>Use <code>grep K</code> for kilobytes. Use <code>grep M</code> for megabytes. Use <code>grep G</code> for Gigabytes.
+<div class="preboxcontainer">
+<pre class="prebox">
+<span class="server">[server]$ </span><span class="command">du -hx --max-depth=1 |grep M</span></pre></div>
+</div>
+<body>
+</html>
